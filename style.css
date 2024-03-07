@@ -1,0 +1,88 @@
+body {
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	height: 100vh;
+    font-family: 'Roboto', sans-serif;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+    }
+}
+
+.text-image {
+    width: 600px;
+    height: auto;
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+}
+
+.map-container {
+    position: fixed;
+    width: 100%;
+    z-index: 1; /* Ensure the container stays below other elements */
+}
+
+.nwsection1 {
+    position: fixed;
+    top: 30%;
+    left: 10%;
+    width: 40%;
+    height: 23%;
+    background-color: rgba(255, 0, 0, 0.5);
+    z-index: 2; /* Ensure the overlay is above the container */
+}
+
+.swsection1 {
+    position: fixed;
+    top: 53%;
+    left: 10%;
+    width: 40%;
+    height: 26%;
+    background-color: rgba(42, 188, 164, 0.5);
+    z-index: 2; /* Ensure the overlay is above the container */
+}
+.sesection1 {
+    position: fixed;
+    top: 47%;
+    left: 50%;
+    width: 45%;
+    height: 30%;
+    background-color: rgba(127, 85, 218, 0.5);
+    z-index: 2; /* Ensure the overlay is above the container */
+}
+.esection1 {
+    position: fixed;
+    top: 30%;
+    left: 50%;
+    width: 35%;
+    height: 17%;
+    background-color: rgba(148, 208, 8, 0.5);
+    z-index: 2; /* Ensure the overlay is above the container */
+}
+
+.map-image {
+    width: 800px;
+    height: 550px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0; /* Ensure the image stays at the bottom */
+    transition: transform 0.5s ease;
+}
+
+.map-image:hover {
+    transform: translate(-50%, -50%) scale(1.1);
+}
