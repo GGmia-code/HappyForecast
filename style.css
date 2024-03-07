@@ -29,46 +29,46 @@ body {
 }
 
 .map-container {
-    position: fixed;
+    position: relative;
     width: 100%;
     z-index: 1; /* Ensure the container stays below other elements */
 }
 
 .nwsection1 {
     position: fixed;
-    top: 30%;
-    left: 10%;
-    width: 40%;
+    top: 29%;
+    left: 32%;
+    width: 20%;
     height: 23%;
-    background-color: rgba(255, 0, 0, 0.5);
+    /* background-color: rgba(255, 0, 0, 0.5); */
     z-index: 2; /* Ensure the overlay is above the container */
 }
 
 .swsection1 {
     position: fixed;
-    top: 53%;
-    left: 10%;
-    width: 40%;
+    top: 48%;
+    left: 31%;
+    width: 20%;
     height: 26%;
-    background-color: rgba(42, 188, 164, 0.5);
+    /* background-color: rgba(42, 188, 164, 0.5); */
     z-index: 2; /* Ensure the overlay is above the container */
 }
 .sesection1 {
     position: fixed;
-    top: 47%;
-    left: 50%;
-    width: 45%;
+    top: 42%;
+    left: 49%;
+    width: 20%;
     height: 30%;
-    background-color: rgba(127, 85, 218, 0.5);
+    /* background-color: rgba(127, 85, 218, 0.5); */
     z-index: 2; /* Ensure the overlay is above the container */
 }
 .esection1 {
     position: fixed;
-    top: 30%;
-    left: 50%;
-    width: 35%;
+    top: 32%;
+    left: 48%;
+    width: 20%;
     height: 17%;
-    background-color: rgba(148, 208, 8, 0.5);
+    /* background-color: rgba(148, 208, 8, 0.5); */
     z-index: 2; /* Ensure the overlay is above the container */
 }
 
@@ -85,4 +85,47 @@ body {
 
 .map-image:hover {
     transform: translate(-50%, -50%) scale(1.1);
+}
+.popupContainer {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    z-index: 9999; /* Ensure it's on top of other content */
+    justify-content: center;
+    align-items: center;
+}
+
+.popupContent {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+#popupText {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.popupButton {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    padding: 10px 20px;
+    background-color: rgb(255, 247, 179); /* Set background to transparent */
+    color: rgb(101, 28, 28);
+    border: 2px solid white; /* Add a white border */
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative; /* Add position relative */
+    top: 50%; /* Move the button 50% down */
+    transform: translateY(-50%); /* Center the button vertically */
+}
+
+.popupButton:hover {
+    background-color: white; /* Darker green background color on hover */
 }

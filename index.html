@@ -8,17 +8,24 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@300;400;500;600&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
     <img src="images/filename.png" alt="Text Image" class="text-image">
     <div class="map-container">
         <img src="images/download.png" alt="Map" class="map-image">
         <div class="nwsection1">
-            <button id="openPopupNW">Open Popup</button>
+            <button class="popupButton">NW</button>
         </div>
-        <div class="swsection1"></div>
-        <div class="sesection1"></div>
-        <div class="esection1"></div>
+        <div class="swsection1">
+            <button class="popupButton">SW</button>
+        </div>
+        <div class="sesection1">
+            <button class="popupButton">SE</button>
+        </div>
+        <div class="esection1">
+            <button class="popupButton">E</button>
+        </div>
     </div>
     <!-- Pop up container-->
     <div id="popupContainer" class="popupContainer">
