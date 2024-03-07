@@ -6,16 +6,27 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+
 @keyframes gradient {
 	0% {
 		background-position: 0% 50%;
 	}
-	50% {
+	25% {
 		background-position: 100% 50%;
 	}
-	100% {
+	50% {
 		background-position: 0% 50%;
     }
+    75% {
+		background-position: 100% 50%;
+    }
+    100% {
+		background-position: 0% 50%;
+    }
+}
+body.circular-gradient {
+    background: radial-gradient(circle, #8e54d5, #de7a00);
+    background-size: cover;
 }
 
 .text-image {
@@ -31,7 +42,7 @@ body {
 .map-container {
     position: relative;
     width: 100%;
-    z-index: 1; /* Ensure the container stays below other elements */
+    z-index: 1;
 }
 
 .nwsection1 {
@@ -41,7 +52,7 @@ body {
     width: 20%;
     height: 23%;
     /* background-color: rgba(255, 0, 0, 0.5); */
-    z-index: 2; /* Ensure the overlay is above the container */
+    z-index: 2;
 }
 
 .swsection1 {
@@ -51,7 +62,7 @@ body {
     width: 20%;
     height: 26%;
     /* background-color: rgba(42, 188, 164, 0.5); */
-    z-index: 2; /* Ensure the overlay is above the container */
+    z-index: 2;
 }
 .sesection1 {
     position: fixed;
@@ -60,7 +71,7 @@ body {
     width: 20%;
     height: 30%;
     /* background-color: rgba(127, 85, 218, 0.5); */
-    z-index: 2; /* Ensure the overlay is above the container */
+    z-index: 2;
 }
 .esection1 {
     position: fixed;
@@ -69,7 +80,7 @@ body {
     width: 20%;
     height: 17%;
     /* background-color: rgba(148, 208, 8, 0.5); */
-    z-index: 2; /* Ensure the overlay is above the container */
+    z-index: 2;
 }
 
 .map-image {
@@ -79,25 +90,29 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 0; /* Ensure the image stays at the bottom */
+    z-index: 0;
     transition: transform 0.5s ease;
 }
 
-.map-image:hover {
+/* .map-image:hover {
     transform: translate(-50%, -50%) scale(1.1);
-}
+} */
 .popupContainer {
     display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-    z-index: 9999; /* Ensure it's on top of other content */
     justify-content: center;
     align-items: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 100px;
+    background-color: rgba(12, 255, 251, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    z-index: 9999;
 }
+
 
 .popupContent {
     background-color: white;
@@ -108,7 +123,7 @@ body {
 
 #popupText {
     display: block;
-    margin-bottom: 10px;
+    margin-bottom: 50px;
 }
 
 .popupButton {
@@ -116,16 +131,16 @@ body {
     margin: 0 auto;
     text-align: center;
     padding: 10px 20px;
-    background-color: rgb(255, 247, 179); /* Set background to transparent */
+    background-color: rgb(255, 247, 179);
     color: rgb(101, 28, 28);
-    border: 2px solid white; /* Add a white border */
+    border: 2px solid white;
     border-radius: 5px;
     cursor: pointer;
-    position: relative; /* Add position relative */
-    top: 50%; /* Move the button 50% down */
-    transform: translateY(-50%); /* Center the button vertically */
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .popupButton:hover {
-    background-color: white; /* Darker green background color on hover */
+    background-color: white;
 }
