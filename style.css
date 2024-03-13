@@ -144,3 +144,15 @@ body.circular-gradient {
 .popupButton:hover {
     background-color: white;
 }
+
+svg path {
+    fill:transparent;
+    stroke: #eee;
+    stroke-width: 0.25;
+}
+svg path:hover {
+    fill:rgb(220, 217, 37);
+    fill-opacity: 45%;
+    transition: 0.6s;
+    cursor: pointer;
+}
