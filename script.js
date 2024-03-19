@@ -3,7 +3,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const popupText = document.getElementById('popupText');
     const mapContainer = document.querySelector('.map-container');
 
-    // Define messages for each path
     const pathMessages = {
         path1: "Mild, but grey",
         path2: "Grey, just grey",
@@ -12,10 +11,9 @@ document.addEventListener('DOMContentLoaded', function () {
         path5: "Marvelous",
         path6: "Dreadfully Dull",
         path7: "Overcast"
-        // Add messages for more paths here
+
     };
 
-    // Function to open the pop-up with specified text
     function openPopup(text) {
         popupText.textContent = text;
         popupContainer.style.display = 'block';
@@ -49,6 +47,4 @@ document.addEventListener('DOMContentLoaded', function () {
         closePopup();
         changeToLinearGradient();
     });
-
-    // Optionally, you can add code here to handle closing the pop-up when clicking outside of it or any other desired functionality.
 });
