@@ -9,6 +9,15 @@
     font-weight: 500;
 }
 
+.text-image {
+    width: 600px;
+    height: auto;
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+}
 body {
     background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
     background-size: 400% 400%;
@@ -40,15 +49,6 @@ body.circular-gradient {
     background-size: cover;
 }
 
-.text-image {
-    width: 600px;
-    height: auto;
-    position: fixed;
-    top: 20%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1000;
-}
 
 
 .map-image {
